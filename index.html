@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://kit.fontawesome.com/5572e67600.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="row justify-content-center mt-5">
+
+    <div class="card">
+      <div class="card-header">
+        <h2>Payment Form Example</h2>
+      </div>
+      <div class="card-body">
+        <div class="alert alert-danger" role="alert">
+          Some fields are missing
+        </div>
+        <div class="row mt-4">
+          <div class="col-sm-5 pb-3">
+            <label for="exampleAccount">Card #</label>
+            <input class="form-control" id="exampleAccount" placeholder="XXXXXXXXXXX" type="text">
+          </div>
+          <div class="col-sm-3 pb-3">
+            <label for="exampleCtrl">CVC #</label>
+            <input class="form-control" id="exampleCtrl" placeholder="0000" type="text">
+          </div>
+          <div class="col-sm-4 pb-3">
+            <label for="exampleAmount">Amount</label>
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+              <input class="form-control" id="exampleAmount" placeholder="Amount" type="number">
+            </div>
+          </div>
+
+          <div class="col-sm-6 pb-3">
+            <label for="exampleFirst">First Name</label>
+            <input class="form-control" id="exampleFirst" type="text">
+          </div>
+          <div class="col-sm-6 pb-3">
+            <label for="exampleLast">Last Name</label>
+            <input class="form-control" id="exampleLast" type="text">
+          </div>
+
+          <div class="col-sm-6 pb-3">
+            <label for="exampleCity">City</label> <input class="form-control" id="exampleCity" type="text">
+          </div>
+
+          <div class="col-sm-3 pb-3">
+            <label for="exampleSt">State</label> <select class="form-control custom-select" id="exampleSt">
+              <option class="text-white bg-warning">
+                Pick a state
+              </option>
+              <option value="AMZ">
+                Amazona
+              </option>
+              <option value="ANZ">
+                Anzoategui
+              </option>
+              <option value="APE">
+                Apure
+              </option>
+              <option value="ARG">
+                Aragua
+              </option>
+              <option value="BAR">
+                Barinas
+              </option>
+              <option value="BOL">
+                Bolivar
+              </option>
+              <option value="CAR">
+                Carabobo
+              </option>
+              <option value="COJ">
+                Cojedes
+              </option>
+              <option value="DELTAM">
+                Delta Amacuro
+              </option>
+              <option value="FAL">
+                Falcon
+              </option>
+              <option value="GUA">
+                Guarico
+              </option>
+              <option value="LAR">
+                Lara
+              </option>
+              <option value="MER">
+                Merida
+              </option>
+              <option value="MIR">
+                Miranda
+              </option>
+              <option value="MON">
+                Monagas
+              </option>
+              <option value="NE">
+                Nueva Esparta
+              </option>
+              <option value="POR">
+                Portuguesa
+              </option>
+              <option value="SUC">
+                Sucre
+              </option>
+              <option value="TAC">
+                Tachira
+              </option>
+              <option value="TRU">
+                Trujillo
+              </option>
+              <option value="VAR">
+                Vargas
+              </option>
+              <option value="YAR">
+                Yaracuy
+              </option>
+              <option value="ZUL">
+                ZUlia
+              </option>
+            </select>
+          </div>
+
+          <div class="col-sm-3 pb-3">
+            <label for="exampleZipcode"> Postal Code</label>
+            <input class="form-control" id="exampleZipcode" type="text">
+          </div>
+
+          <div class="col-md-6 pb-3">
+            <p for="exampleAccount">We accept:</p>
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-secondary">
+                <input autocomplete="off" checked id="blue" name="options" type="radio">
+                <i class="fab fa-cc-mastercard"></i>
+              </label>
+              <label class="btn btn-secondary">
+                <input autocomplete="off" id="red" name="options" type="radio">
+                <i class="fab fa-cc-visa"></i>
+              </label>
+              <label class="btn btn-secondary">
+                <input autocomplete="off" id="green" name="options" type="radio">
+                <i class="fab fa-cc-diners-club"></i>
+              </label>
+              <label class="btn btn-secondary">
+                <input autocomplete="off" id="yellow" name="options" type="radio">
+                <i class="fab fa-cc-amex"></i>
+              </label>
+            </div>
+          </div>
+
+          <div class="col-md-6 pb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <small class="text-muted">Add any notes here.</small>
+          </div>
+
+          <div class="card-footer">
+            <div class="float-end">
+              <button class="btn btn-secondary" type="reset">Cancel</button> 
+              <button id="sendForm" class="btn btn-primary" type="button" />Send</button>
+            </div>
+          </div>
+      </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
